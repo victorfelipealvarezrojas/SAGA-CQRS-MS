@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  axon-server:
+    image: axoniq/axonserver:2024.1.4-jdk-17-nonroot
+    container_name: axon-server
+    ports:
+      - "8024:8024"
+      - "8124:8124"
+
+networks:
+  default:
+    driver: bridge
