@@ -1,5 +1,6 @@
 package productSercice.command.rest;
 
+import jakarta.validation.Valid;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 
 import org.springframework.core.env.Environment;
@@ -22,7 +23,7 @@ public class ProductsCommandController {
     }
 
     @PostMapping
-    public String createProduct(@RequestBody CreateProductRestModel product) {
+    public String createProduct(@Valid @RequestBody CreateProductRestModel product) {
 
         CreateProductCommand createProductCommand = CreateProductCommand.builder()
                 .productId(UUID.randomUUID().toString())
