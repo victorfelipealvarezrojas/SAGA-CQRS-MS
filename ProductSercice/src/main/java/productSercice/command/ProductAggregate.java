@@ -15,8 +15,11 @@ public class ProductAggregate {
 
     @AggregateIdentifier
     private String productId;
+
     private String title;
+
     private BigDecimal price;
+
     private Integer quantity;
 
     public ProductAggregate() {}

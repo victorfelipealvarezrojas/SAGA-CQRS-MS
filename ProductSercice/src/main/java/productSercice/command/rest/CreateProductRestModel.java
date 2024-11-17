@@ -1,4 +1,4 @@
-package productSercice.Rest;
+package productSercice.command.rest;
 
 import lombok.Data;
 
